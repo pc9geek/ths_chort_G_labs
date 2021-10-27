@@ -1,4 +1,4 @@
-// DAT0.213
+// DATA - Keith
 const matrixA = [
   [0, 1],
   [2, 3],
@@ -22,26 +22,39 @@ function showresult(matrix) {
 
 // Comletethe following
 
-function matrixAdd(matrix1, matrix2) {
-  result = [];
-  // TODO
-  return matrix1;
+function matrixAddKeith(matrix1, matrix2) {
+  result = matrix1;
+  for (let i = 0; i < matrix1.length; i++) {
+    for (let j = 0; j < matrix1[0].length; j++) {
+      result[i][j] = matrix1[i][j] + matrix2[i][j];
+    }
+  }
+  return result;
 }
 
-function matrixSubtract(matrix1, matrix2) {
-  result = [];
-  // TODO
-  return matrix1;
+function matrixSubtractKeith(matrix1, matrix2) {
+  result = matrix1;
+  for (let i = 0; i < matrix1.length; i++) {
+    for (let j = 0; j < matrix1[0].length; j++) {
+      result[i][j] = matrix1[i][j] - matrix2[i][j];
+    }
+  }
+  return result;
 }
 
-function matrixScalarMultiply(matrix1, scalar) {
-  result = [];
-  //TODO
-  return matrix1;
+function matrixScalarMultiplyKeith(matrix, scalar) {
+  result = matrix;
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[0].length; j++) {
+      result[i][j] = matrix[i][j] * scalar;
+    }
+  }
+  return result;
 }
 
-console.log("changed on local");
-console.log("changed file on master");
-showresult(matrixAdd(matrixA, matrixB));
-showresult(matrixSubtract(matrixA, matrixB));
-showresult(matrixScalarMultiply(matrixA, matrixB));
+console.log("\n" + "Matrix Add");
+showresult(matrixAddKeith(matrixA, matrixB));
+console.log("\n" + "Matrix Subtract");
+showresult(matrixSubtractKeith(matrixA, matrixB));
+console.log("\n" + "Matrix Scalar");
+showresult(matrixScalarMultiplyKeith(matrixA, scalarA));
