@@ -46,6 +46,7 @@ function matrixScalarMultiply(matrix1,scalar){
     return matrix1;
 }
 
+console.log("changed on local");
 console.log("changed file on master");
 showresult(matrixAdd(matrixA,matrixB));
 showresult(matrixSubtract(matrixA,matrixB));
