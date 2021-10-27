@@ -40,7 +40,7 @@ function matrixSubtract(matrix1,matrix2){
     return matrix1;
 }
 
-function matrixScalarMultiply(matrix,scalar){
+function matrixScalarMultiply(matrix1,scalar){
     result=[];
     //TODO
     return matrix1;
