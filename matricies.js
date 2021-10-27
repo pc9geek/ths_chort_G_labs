@@ -24,7 +24,6 @@ function showresult(matrix){
     matrix.forEach((row)=>{        
         console.log(`|${row.join("|")}|`);
     })
-
 }
 
 // Comletethe following
@@ -32,19 +31,19 @@ function showresult(matrix){
 function matrixAdd(matrix1,matrix2){
     result=[];
     // TODO
-    return result;
+    return matrix1;
 }
 
 function matrixSubtract(matrix1,matrix2){
     result=[];
     // TODO
-    return result;
+    return matrix1;
 }
 
 function matrixScalarMultiply(matrix,scalar){
     result=[];
     //TODO
-    return result;
+    return matrix1;
 }
 
 
