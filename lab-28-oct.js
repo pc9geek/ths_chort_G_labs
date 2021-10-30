@@ -1,24 +1,3 @@
-/*
-//     let newStr = "";
-//     let messChar = "";
-
-//     for (let i = 0; i <= msg.length; i++) {
-//       messChar = msg.charAt(i);
-//       if (messChar.charCodeAt(0) === 32) {
-//         newStr += " ";
-//       } else if (messChar.charCodeAt(0) === 92) {
-//         newStr += charCode(92);
-//       } else {
-//         for (let j = 0; j < alpha.length; j++) {
-//           if (messChar === alpha.charAt(j)) {
-//             newStr += cip.charAt(j);
-//           }
-//         }
-//       }
-//     }
-//     return newStr;
-*/
-
 //////////////////////////////////////////////////////////////
 //Encode the following passage of text with  ROT13 Encryption
 //////////////////////////////////////////////////////////////
@@ -47,10 +26,6 @@ function ROT13encode(msg, alpha, cip) {
   return msg.replace(/[a-z]/gi, (elem) => cip[alpha.indexOf(elem)]);
 }
 
-function hasWhiteSpace(char) {
-  return char.indexOf(" ") >= 0;
-}
-
 function ROT13decode(msg, alpha, cip) {
   //TODO
   return msg.replace(/[a-z]/gi, (elem) => alpha[cip.indexOf(elem)]);
@@ -61,6 +36,3 @@ console.log(resultCoded);
 console.log("---------------------------" + "\n");
 let resultDecoded = ROT13decode(resultCoded, alphabet, cipher);
 console.log(resultDecoded);
-// console.log(ROT13encode(message, alphabet, cipher));
-
-// console.log(ROT13decode(message, alphabet, cipher));
