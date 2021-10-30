@@ -1,30 +1,29 @@
 /*
- Please solve the following problems:
+//     let newStr = "";
+//     let messChar = "";
+
+//     for (let i = 0; i <= msg.length; i++) {
+//       messChar = msg.charAt(i);
+//       if (messChar.charCodeAt(0) === 32) {
+//         newStr += " ";
+//       } else if (messChar.charCodeAt(0) === 92) {
+//         newStr += charCode(92);
+//       } else {
+//         for (let j = 0; j < alpha.length; j++) {
+//           if (messChar === alpha.charAt(j)) {
+//             newStr += cip.charAt(j);
+//           }
+//         }
+//       }
+//     }
+//     return newStr;
 */
-///////////////////////////////////////////////////////////////
-// Given an array of integers, find the sum of its elements.
-///////////////////////////////////////////////////////////////
-let data=[1,2,3,4,10,11];   // should result in 31
-function simpleArraySum(){
-    // TODO
-}
-let result=simpleArraySum(data);
-console.log(result);
-
-///////////////////////////////////////////////////////////////
-// Given an array of names return an array sorted alphabetically
-///////////////////////////////////////////////////////////////
-let names=["Steven","Himanshu", "Elo","Keith","Saikran","Sahej"];
-
-function sortAlphabetically(arr){
-    // TODO
-}
-console.log(sortAlphabetically(names));
 
 //////////////////////////////////////////////////////////////
 //Encode the following passage of text with  ROT13 Encryption
 //////////////////////////////////////////////////////////////
-let message="Do not go gentle into that good night,\n\
+let message =
+  "Do not go gentle into that good night,\n\
 Old age should burn and rave at close of day;\n\
 Rage, rage against the dying of the light.\n\
 \n\
@@ -36,14 +35,32 @@ Good men, the last wave by, crying how bright\n\
 Their frail deeds might have danced in a green bay,\n\
 Rage, rage against the dying of the light.";
 
-function ROT13encode(text){
-    //TODO
-    return text;
+// loop through the message.  Find the first character
+//  search the alpha array to find the index position of the character
+//  find the character in the index position of the cipher array
+//  push the cipher character to a new array
+
+var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+var cipher = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+function ROT13encode(msg, alpha, cip) {
+  return msg.replace(/[a-z]/gi, (elem) => cip[alpha.indexOf(elem)]);
 }
 
-function ROT13decode(text){
-    //TODO
-    return text;
+function hasWhiteSpace(char) {
+  return char.indexOf(" ") >= 0;
 }
 
-console.log(ROT13(message));
+function ROT13decode(msg, alpha, cip) {
+  //TODO
+  return msg.replace(/[a-z]/gi, (elem) => alpha[cip.indexOf(elem)]);
+}
+
+let resultCoded = ROT13encode(message, alphabet, cipher);
+console.log(resultCoded);
+console.log("---------------------------" + "\n");
+let resultDecoded = ROT13decode(resultCoded, alphabet, cipher);
+console.log(resultDecoded);
+// console.log(ROT13encode(message, alphabet, cipher));
+
+// console.log(ROT13decode(message, alphabet, cipher));
