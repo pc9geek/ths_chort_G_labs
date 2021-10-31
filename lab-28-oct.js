@@ -9,7 +9,7 @@ function simpleArraySum(){
     // TODO
 }
 let result=simpleArraySum(data);
-console.log(result);
+//console.log(result);
 
 ///////////////////////////////////////////////////////////////
 // Given an array of names return an array sorted alphabetically
@@ -19,7 +19,7 @@ let names=["Steven","Himanshu", "Elo","Keith","Saikran","Sahej"];
 function sortAlphabetically(arr){
     // TODO
 }
-console.log(sortAlphabetically(names));
+//console.log(sortAlphabetically(names));
 
 //////////////////////////////////////////////////////////////
 //Encode the following passage of text with  ROT13 Encryption
@@ -37,13 +37,44 @@ Their frail deeds might have danced in a green bay,\n\
 Rage, rage against the dying of the light.";
 
 function ROT13encode(text){
-    //TODO
-    return text;
+    
+    let alphabet='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    let cipher=  'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
+
+    let result="";
+    for(let i=0;i<text.length;i++){
+        let char=text[i];
+        for(let j=0;j<alphabet.length;j++){
+            if(char==alphabet[j]){
+                char=cipher[j];
+                j=alphabet.length;
+            }
+        }
+        result+=char;
+    }
+    return result;
 }
 
 function ROT13decode(text){
-    //TODO
-    return text;
-}
+  
+    let alphabet='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    let cipher=  'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
 
-console.log(ROT13(message));
+    let result="";
+    for(let i=0;i<text.length;i++){
+        let char=text[i];
+        for(let j=0;j<cipher.length;j++){
+            if(char==cipher[j]){
+                char=alphabet[j];
+                j=cipher.length;
+            }
+        }
+        result+=char;
+    }
+    return result;
+}
+let codedMessage=ROT13encode(message);
+console.log(codedMessage);
+let decodedMessage=ROT13decode(codedMessage);
+console.log(decodedMessage);
+
