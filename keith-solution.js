@@ -19,8 +19,7 @@
 
     write a series of tests to demonstrate your success
 
-    Push your branch    
-
+    Push your branch   
 */
 
 class Encryption {
@@ -42,11 +41,7 @@ class Encryption {
     );
   }
   reverseTheString() {
-    let newStr = "";
-    for (let i = this.message.length; i >= 0; i--) {
-      newStr += this.message[i];
-    }
-    return newStr;
+    return this.message.split("").reverse().join("");
   }
   allCapitals() {
     return this.message.toUpperCase();
@@ -85,21 +80,22 @@ Rage, rage against the dying of the light."
 console.log(n);
 let coded = n.rot13Encode();
 console.log(coded);
-console.log("-------------------");
+console.log("-------------------" + "\n");
 let decoded = n.rot13Decode(coded);
 console.log(decoded);
-console.log("-------------------");
+console.log("-------------------" + "\n");
 let reverse = n.reverseTheString();
 console.log(reverse);
-console.log("-------------------");
+console.log("-------------------" + "\n");
 let upper = n.allCapitals();
 console.log(upper);
-console.log("-------------------");
+console.log("-------------------" + "\n");
 let lower = n.allLowerCase();
 console.log(lower);
-console.log("-------------------");
+console.log("-------------------" + "\n");
 let firstUp = n.firstLetterUpperCase();
 console.log(firstUp);
-console.log("-------------------");
+console.log("-------------------" + "\n");
 let sentence = n.sentenceCase();
 console.log(sentence);
+console.log("\n");
