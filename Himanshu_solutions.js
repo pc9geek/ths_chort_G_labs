@@ -50,21 +50,19 @@ class encryption {
   capitalInitials() {
     let text = this.string;
     let words = text.split(" ");
-    words.map((elm) => {
-      return elm[0].toUpperCase() + elm.substring(1);
-    });
+    for (let i = 0; i < words.length; i++) {
+      words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+    }
     return words.join(" ");
   }
   sentenceCase() {
     let text = this.string;
     let str1 = text.slice(0, 1).toUpperCase;
     let str2 = text.slice(1);
-    text = str1.concat(str2);
-    return text;
   }
 }
 
 let testString = new encryption(
   "this is a sample string to verify the class methods"
 );
-console.log(testString.capitalInitials());
+console.log(testString.sentenceCase());
