@@ -22,3 +22,31 @@
     Push your branch    
 
 */
+
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+
+console.log(reverseString("hello World"));
+
+function upperCase(str) {
+  return str.toUpperCase();
+}
+console.log(upperCase("hello world"));
+
+function lowerCase(str) {
+  return str.toLowerCase();
+}
+console.log(lowerCase("HELLO WORLD"));
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+console.log(
+  capitalizeFirstLetter(
+    "Do not go gentle into that good night,\n\
+Old age should burn and rave at close of day.\n\
+Rage, rage against the dying of the light."
+  )
+);
