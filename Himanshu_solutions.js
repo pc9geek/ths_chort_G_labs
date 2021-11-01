@@ -39,7 +39,7 @@ class encryption {
     return result;
   }
   reverse() {
-    return this.string.split("").reverse().join("");
+    return this.string.split(" ").reverse().join(" ");
   }
   allCapitals() {
     return this.string.toUpperCase();
@@ -49,18 +49,22 @@ class encryption {
   }
   capitalInitials() {
     let text = this.string;
-    let splitstr = text.split(" ");
-    for (let i = 0; i < splitstr.length; i++) {
-      splitstr[i].charAt(0).toUpperCase();
-    }
-    text = splitstr.join(" ");
-    return text;
+    let words = text.split(" ");
+    words.map((elm) => {
+      return elm[0].toUpperCase() + elm.substring(1);
+    });
+    return words.join(" ");
   }
   sentenceCase() {
     let text = this.string;
-    let str1 = text.charAt(0).toUpperCase;
+    let str1 = text.slice(0, 1).toUpperCase;
     let str2 = text.slice(1);
     text = str1.concat(str2);
     return text;
   }
 }
+
+let testString = new encryption(
+  "this is a sample string to verify the class methods"
+);
+console.log(testString.capitalInitials());
