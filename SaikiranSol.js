@@ -25,3 +25,8 @@ console.log(
     Rage, rage against the dying of the light"
   )
 );
+
+function ROT13decode(text) {
+  let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  let cipher = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+}
