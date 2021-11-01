@@ -38,15 +38,3 @@ function lowerCase(str) {
   return str.toLowerCase();
 }
 console.log(lowerCase("HELLO WORLD"));
-
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-console.log(
-  capitalizeFirstLetter(
-    "Do not go gentle into that good night,\n\
-Old age should burn and rave at close of day.\n\
-Rage, rage against the dying of the light."
-  )
-);
